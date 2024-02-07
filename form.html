@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Details</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            min-height: 100vh;
+            background: #ffffff;
+            flex-direction: column;
+        }
+
+
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h1,
+        h3{
+            text-align: center;
+            color: green;
+        }
+        input{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Welcome To My Site </h1>
+        <form onsubmit="showAlert(event)">
+            <fieldset>
+            
+                <legend><b>Personal Details</b></legend>
+            <p>
+                <label>Username :
+                    <input type="text"></label>
+            </p>
+            <p>
+                <label>Email id :
+                    <input type="text"></label>
+            </p>
+            <p>
+                <label>Password :
+                    <input type="password">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Date of Birth:
+                    <input type="date" name="BirthDate">
+                </label>
+            </p>
+            <p>
+                <h3 style="color: black;">Choose Your Gender</h3>
+                <label>
+                    Male
+                    <input type="radio" name="Gender" value="Male">
+                </label>
+                <label>
+                    Female
+                    <input type="radio" name="Gender" value="Female">
+                </label>
+            </p>
+
+                <h3 style="color: black;">Choose Your Nationality</h3>
+                <select name="Language">
+                    <option value="Indian">Indian</option>
+                    <option value="Others">Others</option>
+                </select>
+            </p>
+            <p>
+                <label>
+                    Address :
+                    <br />
+                    <textarea name="Address" cols="40" rows="10"></textarea>
+                </label>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        
+        </form>
+    </fieldset>
+
+    </div>
+    <script>
+        function showAlert(event){
+            // Prevents the default from submission
+            event.preventDefault();
+            alert('From Submitted!');
+        }
+    </script>
+</body>
+</html>
